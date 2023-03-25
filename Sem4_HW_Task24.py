@@ -18,10 +18,13 @@ n = int(input('Введите количество кустов: '))
 berries = list(randint(1, 6) for i in range(n))
 print('Ягод на кустах: ', berries)
 maxBerries = berries[0] + berries[1] + berries[-1]
-for i in range (n):
-    possibleMaxBerries = sum(berries[i:i+3])
+for i in range(1,n):
+    if i != n-1:
+        possibleMaxBerries = berries[i] + berries[i-1] + berries[i+1]
+    else:
+        possibleMaxBerries = berries[i] + berries[i-1] + berries[0]
     if possibleMaxBerries > maxBerries:
         maxBerries = possibleMaxBerries
-    elif berries[i-1] + berries[i-2] + berries [0] > maxBerries:
-         maxBerries = berries[i-1] + berries[i-2] + berries [0]
+    # elif berries[i-1] + berries[i-2] + berries[0] > maxBerries:
+    #     maxBerries = berries[i-1] + berries[i-2] + berries[0]
 print('Максимальное количечтво ягод которые может собрать модуль за 1 заход = ', maxBerries)
