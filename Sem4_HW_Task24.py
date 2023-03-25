@@ -25,6 +25,4 @@ for i in range(1,n):
         possibleMaxBerries = berries[i] + berries[i-1] + berries[0]
     if possibleMaxBerries > maxBerries:
         maxBerries = possibleMaxBerries
-    # elif berries[i-1] + berries[i-2] + berries[0] > maxBerries:
-    #     maxBerries = berries[i-1] + berries[i-2] + berries[0]
 print('Максимальное количечтво ягод которые может собрать модуль за 1 заход = ', maxBerries)
