@@ -1,7 +1,3 @@
-# Задача 38: Дополнить телефонный справочник возможностью изменения и удаления данных.
-# Пользователь также может ввести имя или фамилию, и Вы должны реализовать функционал
-# для изменения и удаления данных.
-
 def writing_person():
     lastname = input("фамилия: ")
     name = input("имя: ")
@@ -54,10 +50,10 @@ def replace_info():
                 if line_change not in line:
                     data1.write(line)
                 else:
-                    ask = input('Что хотите поменять (1,2,3,4')
-                    while ask not in ("1", "2", "3", "4"):
+                    ask = input('Что хотите поменять (1,2,3')
+                    while ask not in ("1", "2", "3"):
                         print('ввод некорректный ')
-                        ask = input('Что хотите поменять (1,2,3,4)  : ')
+                        ask = input('Что хотите поменять (1,2,3)  : ')
                     new_data = input('Введите новые данные : ')
                     line_list = line.split()
                     line_list[int(ask)-1] = new_data
